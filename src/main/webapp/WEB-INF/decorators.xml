@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+
+    <!-- Các trang tự có layout riêng (form đăng nhập/đăng ký căn giữa) -> không áp decorator -->
+    <excludes>
+        <pattern>/login</pattern>
+        <pattern>/register</pattern>
+        <pattern>/verify-otp</pattern>
+        <pattern>/forgot-password</pattern>
+        <pattern>/reset-password</pattern>
+        <pattern>/image</pattern>
+    </excludes>
+
+    <!-- Khu vực quản trị: topbar + tab Danh mục/Sản phẩm dùng chung -->
+    <decorator name="admin" page="admin-decorator.jsp">
+        <pattern>/admin/*</pattern>
+    </decorator>
+
+    <!-- Khu vực người dùng: navbar cửa hàng dùng chung -->
+    <decorator name="main" page="main-decorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+</decorators>
