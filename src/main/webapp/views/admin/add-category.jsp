@@ -1,18 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
-=======
-<%@ include file="/common/taglib.jsp"%>
-<!DOCTYPE html>
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Thêm danh mục</title>
 </head>
 <body>
-<<<<<<< HEAD
   <div class="card shadow-sm" style="max-width:520px;">
     <div class="card-body p-4">
       <c:if test="${param.error == 'validation'}">
@@ -35,25 +29,6 @@
         </div>
       </form>
       <a class="d-inline-block mt-3 small" href="<c:url value='/admin/category/list'/>">&larr; Quay lại danh sách</a>
-=======
-    <div class="container">
-    <div class="form-card">
-      <form role="form" action="<c:url value='/admin/category/add'/>" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-          <label>Tên danh mục</label>
-          <input class="form-control" placeholder="Nhập tên danh mục" name="name" required>
-        </div>
-        <div class="form-group">
-          <label>Ảnh đại diện</label>
-          <input type="file" name="icon">
-        </div>
-        <div class="btn-row">
-          <button type="submit" class="btn btn-primary">Thêm mới</button>
-          <button type="reset" class="btn btn-secondary">Hủy</button>
-        </div>
-      </form>
-      <a class="back-link" href="<c:url value='/admin/category/list'/>">&larr; Quay lại danh sách</a>
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     </div>
   </div>
 </body>

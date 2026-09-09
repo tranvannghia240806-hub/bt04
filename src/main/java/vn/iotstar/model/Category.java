@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-<<<<<<< HEAD
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,10 +20,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-=======
-@Entity
-@Table(name = "Category")
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 public class Category implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -38,25 +33,4 @@ public class Category implements Serializable {
 
     @Column(name = "icons", length = 255)
     private String icon;
-<<<<<<< HEAD
-=======
-
-    public Category() {
-    }
-
-    public Category(int id, String name, String icon) {
-        this.id = id;
-        this.name = name;
-        this.icon = icon;
-    }
-
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public String getIcon() { return icon; }
-    public void setIcon(String icon) { this.icon = icon; }
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 }

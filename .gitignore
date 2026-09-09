@@ -1,32 +1,13 @@
-<<<<<<< HEAD
 target/
 
-=======
-# Maven
-target/
-
-# Eclipse
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 .classpath
 .project
 .settings/
 
-<<<<<<< HEAD
 .idea/
 *.iml
 
 .DS_Store
 Thumbs.db
 
-=======
-# STS / IntelliJ
-.idea/
-*.iml
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
->>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 *.log
