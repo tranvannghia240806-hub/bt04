@@ -54,6 +54,7 @@ public class CategoryAddController extends HttpServlet {
                     }
                 }
             }
+<<<<<<< HEAD
 
             if (category.getName() == null || category.getName().trim().isEmpty()) {
                 resp.sendRedirect(req.getContextPath() + "/admin/category/add?error=validation");
@@ -61,6 +62,8 @@ public class CategoryAddController extends HttpServlet {
             }
             category.setName(category.getName().trim());
 
+=======
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
             cateService.insert(category);
             resp.sendRedirect(req.getContextPath() + "/admin/category/list");
         } catch (FileUploadException e) {

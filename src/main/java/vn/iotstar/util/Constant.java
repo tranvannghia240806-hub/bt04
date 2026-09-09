@@ -2,6 +2,10 @@ package vn.iotstar.util;
 
 public class Constant {
 
+<<<<<<< HEAD
+=======
+    // Thư mục lưu file upload (icon danh mục, ảnh sản phẩm, avatar...)
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     public static final String DIR = "D:\\upload";
 
     public static final String SESSION_ACCOUNT = "account";

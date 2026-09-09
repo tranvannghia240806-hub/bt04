@@ -95,6 +95,7 @@ public class ProductEditController extends HttpServlet {
             }
 
             Category category = categoryService.get(cateId);
+<<<<<<< HEAD
             if (name == null || name.trim().isEmpty()
                     || category == null
                     || price.compareTo(BigDecimal.ZERO) < 0
@@ -103,6 +104,9 @@ public class ProductEditController extends HttpServlet {
                 return;
             }
             Product product = new Product(name.trim(), price, description, image, quantity, null, category);
+=======
+            Product product = new Product(name, price, description, image, quantity, null, category);
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
             product.setId(id);
             productService.edit(product);
             resp.sendRedirect(req.getContextPath() + "/admin/product/list");

@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
+=======
+<%@ include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Chỉnh sửa danh mục</title>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="card shadow-sm" style="max-width:520px;">
     <div class="card-body p-4">
       <c:choose>
@@ -43,6 +49,40 @@
         </div>
       </form>
       <a class="d-inline-block mt-3 small" href="<c:url value='/admin/category/list'/>">&larr; Quay lại danh sách</a>
+=======
+    <div class="container">
+    <div class="form-card">
+      <c:url value="/admin/category/edit" var="editUrl"></c:url>
+      <form role="form" action="${editUrl}" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="${category.id}">
+
+        <c:choose>
+          <c:when test="${fn:startsWith(category.icon, 'http')}">
+            <c:set var="imgUrl" value="${category.icon}"/>
+          </c:when>
+          <c:otherwise>
+            <c:url value="/image" var="imgUrl">
+              <c:param name="fname" value="${category.icon}"/>
+            </c:url>
+          </c:otherwise>
+        </c:choose>
+        <img class="preview-img" width="140" src="${imgUrl}" alt="">
+
+        <div class="form-group">
+          <label>Tên danh mục</label>
+          <input type="text" class="form-control" value="${category.name}" name="name" required>
+        </div>
+        <div class="form-group">
+          <label>Ảnh đại diện (chọn ảnh mới nếu muốn thay đổi)</label>
+          <input type="file" name="icon">
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Cập nhật</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+      <a class="back-link" href="<c:url value='/admin/category/list'/>">&larr; Quay lại danh sách</a>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     </div>
   </div>
 </body>

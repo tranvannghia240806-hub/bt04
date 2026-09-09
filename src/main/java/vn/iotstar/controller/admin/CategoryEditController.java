@@ -66,6 +66,7 @@ public class CategoryEditController extends HttpServlet {
                     category.setIcon(ImageUploadHelper.save(item, "category", "shopping/category"));
                 }
             }
+<<<<<<< HEAD
 
             if (category.getName() == null || category.getName().trim().isEmpty()) {
                 resp.sendRedirect(req.getContextPath() + "/admin/category/edit?id=" + category.getId() + "&error=validation");
@@ -73,6 +74,8 @@ public class CategoryEditController extends HttpServlet {
             }
             category.setName(category.getName().trim());
 
+=======
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
             cateService.edit(category);
             resp.sendRedirect(req.getContextPath() + "/admin/category/list");
         } catch (FileUploadException e) {

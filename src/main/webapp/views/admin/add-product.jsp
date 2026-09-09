@@ -1,12 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
+=======
+<%@ include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Thêm sản phẩm</title>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="card shadow-sm" style="max-width:600px;">
     <div class="card-body p-4">
       <c:if test="${param.error == 'validation'}">
@@ -33,12 +39,32 @@
         </div>
         <div class="mb-3">
           <label >Danh mục</label>
+=======
+    <div class="container">
+    <div class="form-card" style="max-width:560px;">
+      <form role="form" action="<c:url value='/admin/product/add'/>" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>Tên sản phẩm</label>
+          <input class="form-control" placeholder="Nhập tên sản phẩm" name="name" required>
+        </div>
+        <div class="form-group">
+          <label>Giá (VNĐ)</label>
+          <input class="form-control" type="number" min="0" step="1000" placeholder="VD: 199000" name="price" required>
+        </div>
+        <div class="form-group">
+          <label>Số lượng tồn kho</label>
+          <input class="form-control" type="number" min="0" step="1" value="0" name="quantity" required>
+        </div>
+        <div class="form-group">
+          <label>Danh mục</label>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
           <select class="form-control" name="cateId" required>
             <option value="" disabled selected>-- Chọn danh mục --</option>
             <c:forEach items="${cateList}" var="cate">
               <option value="${cate.id}">${cate.name}</option>
             </c:forEach>
           </select>
+<<<<<<< HEAD
           <div class="invalid-feedback">Vui lòng chọn danh mục.</div>
         </div>
         <div class="mb-3">
@@ -55,6 +81,23 @@
         </div>
       </form>
       <a class="d-inline-block mt-3 small" href="<c:url value='/admin/product/list'/>">&larr; Quay lại danh sách</a>
+=======
+        </div>
+        <div class="form-group">
+          <label>Mô tả sản phẩm</label>
+          <textarea class="form-control" name="description" rows="4" placeholder="Mô tả chi tiết sản phẩm..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Hình ảnh</label>
+          <input type="file" name="image">
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Thêm mới</button>
+          <button type="reset" class="btn btn-secondary">Hủy</button>
+        </div>
+      </form>
+      <a class="back-link" href="<c:url value='/admin/product/list'/>">&larr; Quay lại danh sách</a>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     </div>
   </div>
 </body>

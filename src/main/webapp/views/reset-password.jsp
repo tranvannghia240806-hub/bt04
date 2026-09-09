@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="vi">
@@ -42,10 +43,40 @@
       <button type="submit" class="btn btn-primary w-100">Đặt lại mật khẩu</button>
     </form>
     <p class="text-center mt-3 mb-0 small">
+=======
+<%@ include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Đặt lại mật khẩu</title>
+<%@ include file="/common/shared-style.jsp"%>
+</head>
+<body>
+<div class="auth-wrapper">
+  <div class="auth-box">
+    <h2>Nhập mã OTP</h2>
+    <c:if test="${alert != null}">
+      <div class="alert alert-danger">${alert}</div>
+    </c:if>
+    <p style="font-size:13px;color:var(--muted);margin-top:-8px;">
+      Mã OTP đã được gửi tới email của tài khoản <b>${username}</b>. Mã có hiệu lực trong ít phút,
+      nhập mã cùng mật khẩu mới bên dưới.
+    </p>
+    <form action="<c:url value='/reset-password'/>" method="post">
+      <input type="hidden" name="username" value="${username}">
+      <input type="text" placeholder="Mã OTP (6 số)" name="otp" class="form-control" maxlength="6" required>
+      <input type="password" placeholder="Mật khẩu mới" name="newpassword" class="form-control" required>
+      <input type="password" placeholder="Nhập lại mật khẩu mới" name="renewpassword" class="form-control" required>
+      <button type="submit" class="btn btn-primary">Đặt lại mật khẩu</button>
+    </form>
+    <p class="footer-link">
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
       <a href="<c:url value='/forgot-password'/>">&larr; Gửi lại mã OTP</a>
     </p>
   </div>
 </div>
+<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="<c:url value='/assets/js/validation.js'/>"></script>
@@ -58,5 +89,7 @@
   pw.addEventListener('input', checkMatch);
   repw.addEventListener('input', checkMatch);
 </script>
+=======
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 </body>
 </html>

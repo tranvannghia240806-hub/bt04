@@ -16,6 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+<<<<<<< HEAD
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,6 +26,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+=======
+@Entity
+@Table(name = "Products")
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -56,6 +61,12 @@ public class Product implements Serializable {
     @JoinColumn(name = "cate_id", nullable = false)
     private Category category;
 
+<<<<<<< HEAD
+=======
+    public Product() {
+    }
+
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     public Product(String name, BigDecimal price, String description, String image,
                     int quantity, Date createdDate, Category category) {
         this.name = name;
@@ -66,4 +77,31 @@ public class Product implements Serializable {
         this.createdDate = createdDate;
         this.category = category;
     }
+<<<<<<< HEAD
+=======
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public BigDecimal getPrice() { return price; }
+    public void setPrice(BigDecimal price) { this.price = price; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public String getImage() { return image; }
+    public void setImage(String image) { this.image = image; }
+
+    public int getQuantity() { return quantity; }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+
+    public Date getCreatedDate() { return createdDate; }
+    public void setCreatedDate(Date createdDate) { this.createdDate = createdDate; }
+
+    public Category getCategory() { return category; }
+    public void setCategory(Category category) { this.category = category; }
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
 }

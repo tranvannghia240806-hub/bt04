@@ -15,15 +15,27 @@
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
         <properties>
+<<<<<<< HEAD
+=======
+            <!-- ==== Sửa lại thông tin kết nối cho đúng máy của bạn ==== -->
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:sqlserver://localhost:1433;databaseName=ShoppingServiceMVC;encrypt=true;trustServerCertificate=true" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="123" />
 
+<<<<<<< HEAD
             <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
+=======
+            <!-- ==== Hibernate ==== -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <!-- Bảng đã có sẵn (chạy database.sql), KHÔNG cho Hibernate tự tạo/sửa schema -->
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
             <property name="hibernate.hbm2ddl.auto" value="none" />
 
             <property name="hibernate.connection.pool_size" value="10" />

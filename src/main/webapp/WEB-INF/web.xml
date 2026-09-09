@@ -7,7 +7,11 @@
 
     <filter>
         <filter-name>sitemesh</filter-name>
+<<<<<<< HEAD
         <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+=======
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+>>>>>>> d3a050e200cb6982035a6ecda182116a06b2a67a
     </filter>
     <filter-mapping>
         <filter-name>sitemesh</filter-name>
